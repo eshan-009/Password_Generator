@@ -1,0 +1,198 @@
+*, ::before,:after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.Big_container{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small_container{
+    width: 400px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem; 
+}
+#pass_length{
+font-size: 1.5rem;
+}
+.item1{
+    text-align: center;
+   
+}
+.item1 span{
+    font-size: 2.1rem;
+    letter-spacing: 0.1rem;
+    color: gainsboro;
+    font-family:fantasy;
+    opacity: 80%;
+    
+}
+.item2{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    position: relative;
+    border-radius: 0.6rem;
+    border-bottom: 0.35rem solid rgb(2,0,36);
+}
+.item2 input{
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+height: 3rem;
+width: 100%;
+border-radius: 0.6rem;
+background-color: rgb(11, 77, 184);
+border: none;
+}
+.item2 img{
+    position: absolute;
+  left: 92%;
+  top:26%;
+ cursor: pointer;
+    
+}
+
+.item3{
+    display: flex;
+    gap: 1.2rem;
+    flex-direction: column;
+    background-color: rgb(11, 77, 184);
+    padding: 1rem;
+    margin-top: -1rem;
+    color: gainsboro;
+    border-radius: 0.6rem;
+    border-bottom: 0.35rem solid rgb(2,0,36);
+}
+
+#checkboxes{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   gap:0.4rem;
+   font-size: 1rem;
+    
+}
+#checkboxes input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid aqua;
+    cursor: pointer;
+    position: relative;
+    top:0.4rem;
+    border-radius: 0.35rem;
+    margin-right: 0.5rem;
+}
+#checkboxes input:checked{
+    background-color: rgb(112, 193, 193)
+}
+#checkboxes input:checked::before{
+    content: '✔';
+    position: absolute;
+    color: aqua;
+    font-size:1.05rem;
+    font-weight: 600;
+    left:50%;
+    top:-3.5px;
+    transform: translateX(-50%)  ;
+}
+#indicator{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}
+#strength_panel{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+#input_slider input{
+    
+    width: 100%;
+}
+#pass_length{
+    display: flex;
+    justify-content: space-between;
+}
+.slider{
+
+    appearance: none;
+    height: 0.7rem;
+    border-radius: 1rem;
+    background-color:  rgba(2,0,36,1);
+    background-image: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(0,212,255,1) 35%,  rgba(0,212,255,1) 100%);
+    background-repeat: no-repeat;
+  
+}
+.slider::-webkit-slider-thumb{
+    position:relative;
+    z-index:1;
+    appearance: none;
+    height:2rem;
+    width:2rem;
+    border-radius: 50%;
+    background-color: rgba(0,212,255,1);
+    cursor:pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(0,212,255,1);
+    transition: all 100ms ease-in;
+
+}
+.copy_message{
+    color: aquamarine;
+    font-size: 2rem;
+    text-align: center;
+    position: absolute;
+    top: 0%;
+    left: 46%;
+    display: none;
+    margin-top: -7rem;
+    
+}
+.copy_message.active{
+    display: block;
+    animation: pop 2s ease-in-out;
+    transition: all;
+}
+@keyframes pop {
+    0%{
+       transform: translateY(20px);
+       opacity: 0;
+    }
+   
+    100%{
+       
+        transform: translateY( 200px);
+        opacity: 1;
+    }
+    
+}
+.gen_button{
+    color: white;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: rgb(15, 123, 190);
+    text-align: center;
+    border-radius: 0.75rem;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.gen_button:active{
+    background-color: aqua;
+}

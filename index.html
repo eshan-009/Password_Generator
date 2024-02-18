@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="Big_container">
+        
+        <div class="small_container">
+            <div class="copy_message" copy-message>Copied!!</div>
+            <div class="item1">
+                <span>PASSWORD GENERATOR</span>
+            </div>
+            
+            <div class="item2">
+                <input readonly type="text" display-pass>
+                <img src="./copy.svg" width="25rem" copy>
+                
+            </div>
+            <div class="item3">
+                <div id="pass_length">
+                    <span>Password Length</span>
+                    <span pass-length>10</span>
+                </div>
+
+                <div id="input_slider">
+                    <input type="range" class="slider" min="0" max="20" step="1" slider>
+                </div>
+
+                <div id="checkboxes">
+                    <div class="check">
+                        <input type="checkbox" id="uppercase" up>
+                        <label for="uppercase">Includes Uppercase letters</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="lowercase" low>
+                        <label for="lowercase">Includes Lowercase letters</label>
+                    </div>
+        
+                    <div class="check">
+                        <input type="checkbox" id="numbers" numcheck>
+                        <label for="numbers">Includes Numbers </label>
+                    </div>
+        
+                    <div class="check">
+                        <input type="checkbox" id="symbols" symcheck>
+                        <label for="symbols">Includes Symbols </label>
+                    </div>
+
+                </div>
+
+                <div id="strength_panel">
+                    <span>Strength</span>
+                    <div id="indicator" strength></div>
+                </div>
+                
+                <button class="gen_button" generate-button>Generate Password</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
